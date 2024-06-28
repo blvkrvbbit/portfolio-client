@@ -3,8 +3,8 @@ import { Inter, Roboto_Mono, Urbanist } from 'next/font/google';
 
 import '../../globals.css';
 import Navbar from './components/navbar/navbar.component';
-// import Navbar from './components/navbar/navbar.component';
-// import SessionWrapper from './components/session-wrapper/session-wrapper.component';
+
+import SessionWrapper from './components/session-wrapper/session-wrapper.component';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,11 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <Navbar />
-        <div className='container relative top-[6rem]'>{children}</div>
-      </body>
-    </html>
+    <SessionWrapper>
+      <html lang='en'>
+        <body className={inter.className}>
+          <Navbar />
+          <div className='container relative top-[6rem]'>{children}</div>
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }
