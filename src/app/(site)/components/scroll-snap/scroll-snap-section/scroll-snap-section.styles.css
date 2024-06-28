@@ -1,0 +1,10 @@
+.scroll-snap section {
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow-y: scroll;
+}
+
+.scroll-snap section::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
