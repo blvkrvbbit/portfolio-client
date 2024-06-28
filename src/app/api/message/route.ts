@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import db from '@/app/db/db';
+import db from '@/db/db';
 export async function GET(req: Request) {
   try {
     const messages = await db.message.findMany();
