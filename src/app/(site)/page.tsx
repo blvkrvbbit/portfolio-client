@@ -3,8 +3,15 @@ import ScrollSnap from './components/scroll-snap/scroll-snap.component';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import ContactSection from './components/contact-section/contact-section.component';
+import WorkSection from './components/work-section/work-section.component';
+import AboutSection from './components/about-section/about-section.component';
 
-const HomePage = () => {
+const HomePage = async () => {
+  const request = await fetch(`${process.env.FETCH_URL}/api/project`, {
+    cache: 'no-store',
+  });
+
+  const projects = await request.json();
   return (
     <main>
       <div className='flex'>
@@ -35,9 +42,8 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          {/* <WorkSection works={projects.data} /> */}
-          {/* <AboutSection />
-           */}
+          <WorkSection works={projects.data} />
+          <AboutSection />
           <ContactSection />
         </ScrollSnap>
       </div>
