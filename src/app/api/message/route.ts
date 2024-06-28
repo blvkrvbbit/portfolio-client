@@ -11,10 +11,10 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   try {
-    const { name, email, content } = await req.json();
-    const message = await db.message.create({
-      data: { name, email, content },
-    });
+    // const { name, email, content } = await req.json();
+    // const message = await db.message.create({
+    //   data: { name, email, content },
+    // });
 
     return NextResponse.json({ success: 'Message Sent!' }, { status: 200 });
   } catch (error: any) {
