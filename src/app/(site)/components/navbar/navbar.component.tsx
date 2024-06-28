@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link
               href={link[0]}
               key={key}
-              className='   text-right text-3xl block mb-2'
+              className='text-right text-3xl block mb-2'
               onClick={toggleMenu}
             >
               <span className='text-gray opacity-[0.15]'>.</span>

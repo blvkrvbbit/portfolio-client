@@ -179,6 +179,17 @@ const ProjectForm = ({ project }: Props) => {
           >
             Next.js
           </button>
+          <button
+            className={
+              stack.includes('tailwind')
+                ? 'bg-purple border-purple border text-white px-3 py-1'
+                : 'border border-gray px-3 py-1'
+            }
+            value='tailwind'
+            onClick={handleStackSelect}
+          >
+            Tailwind
+          </button>
         </div>
       </div>
       <div className='space-y-2 col-span-2'>

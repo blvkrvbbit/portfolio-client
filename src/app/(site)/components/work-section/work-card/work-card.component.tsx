@@ -60,7 +60,7 @@ const StackIcon = ({ stackItem }: StackProps) => {
         icon='vscode-icons:file-type-reactjs'
       />
     );
-  } else if (stackItem.toLowerCase() === 'tailwindcss') {
+  } else if (stackItem.toLowerCase() === 'tailwind') {
     return (
       <Icon
         className='text-2xl  opacity-[1]'
